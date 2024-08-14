@@ -37,9 +37,9 @@ public class SecondActivity extends AppCompatActivity {
         EditText heightEdit = findViewById(R.id.Height); //height edit
 
         String name = nameEdit.getText().toString();
-        String name = ageEdit.getText().toString();
-        String name = weightEdit.getText().toString();
-        String name = heightEdit.getText().toString();
+        String age = ageEdit.getText().toString();
+        String weight = weightEdit.getText().toString();
+        String height = heightEdit.getText().toString();
 
         //validate the inputs
         // show error messages if applicable
@@ -48,7 +48,7 @@ public class SecondActivity extends AppCompatActivity {
             return;
         }
 
-        if (name.length() => 20) {
+        if (name.length() >= 20) {
             showPopup(this, "Name is too long");
             return;
         }
@@ -63,8 +63,52 @@ public class SecondActivity extends AppCompatActivity {
                 showPopup(this, "Please enter a valid age");
                 return;
             }
-        } catch (NumberFormatException)
-    }
+        } catch (NumberFormatException e) {
+            // Makes sure that the age is a number
+            showPopup(this, "Please enter a valid age");
+            return;
+        }
+        // Validates weight
+        if (weight.length() <= 0) { // Checks that the user hasn't entered a weight
+            showPopup(this, "Please enter a weight");
+            return;
+        }
+        int weightInt;
+        try {
+            // Converts the weight to an integer
+            weightInt = Integer.parseInt(weight);
+            if (weightInt < 0) {
+                // Checks that the weight is not negative
+                showPopup(this, "Please enter a valid weight");
+                return;
+            }
+        } catch (NumberFormatException e) {
+            // Makes sure that the weight is a number
+            showPopup(this, "Please enter a valid weight");
+            return;
+        }
+        // Validates height
+        if (height.length() <= 0) {
+            // Checks that the user hasn't entered a height
+            showPopup(this, "Please enter a height");
+            return;
+        }
+        int heightInt;
+        try {
+            // Converts the height to an integer
+            heightInt = Integer.parseInt(height);
+            if (heightInt < 0) {
+                // Checks that the height is not negative
+                showPopup(this, "Please enter a valid height");
+                return;
+            }
+        } catch (NumberFormatException e) {
+            // Makes sure that the height is a number
+            showPopup(this, "Please enter a valid height");
+            return;
+        }
+
+        }
     public static void showPopup(Context context, String errorMessage) {
         Toast.makeText(context, errorMessage, Toast.LENGTH_SHORT).show();
     }

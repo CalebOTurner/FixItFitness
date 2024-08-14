@@ -115,6 +115,7 @@
         android:layout_width="213dp"
         android:layout_height="52dp"
         android:layout_marginBottom="30dp"
+        android:onClick="handleSubmit"
         android:text="Continue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

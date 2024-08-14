@@ -18,7 +18,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/Q1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/arbutus"
@@ -34,7 +34,7 @@
             android:inputType="textPassword" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/Q5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/arbutus"
@@ -50,7 +50,7 @@
             android:inputType="numberPassword" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/Q5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/arbutus"
@@ -66,7 +66,7 @@
             android:inputType="numberPassword" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/Q5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/arbutus"
@@ -82,7 +82,7 @@
             android:inputType="numberPassword" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/Q5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/arbutus"

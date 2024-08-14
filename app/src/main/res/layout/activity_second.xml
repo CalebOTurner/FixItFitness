@@ -20,7 +20,7 @@
         tools:layout_editor_absoluteY="281dp">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/Q1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/arbutus"
@@ -29,7 +29,7 @@
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -37,7 +37,7 @@
             android:text="Name" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/Q2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/arbutus"
@@ -46,14 +46,14 @@
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/Age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/Q3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/arbutus"
@@ -62,14 +62,14 @@
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/editTextNumber2"
+            android:id="@+id/Height"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:ems="10"
             android:inputType="number" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/Q4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/arbutus"
@@ -78,14 +78,14 @@
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/editTextNumber3"
+            android:id="@+id/Weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/Q5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/arbutus"
@@ -94,7 +94,7 @@
             android:textColor="@color/white" />
 
         <CheckedTextView
-            android:id="@+id/checkedTextView"
+            android:id="@+id/Level"
             android:layout_width="match_parent"
             android:layout_height="59dp"
             android:text="CheckedTextView" />
@@ -107,7 +107,7 @@
         android:layout_height="186dp"
         tools:layout_editor_absoluteX="82dp"
         tools:layout_editor_absoluteY="70dp"
-        tools:srcCompat="@drawable/imgfixitfitness" />
+        tools:src="@drawable/imgfixitfitness" />
 
     <Button
         android:id="@+id/button"

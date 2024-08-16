@@ -33,7 +33,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:text="Name" />
+            android:text="Name"
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/Q2"
@@ -49,7 +50,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/Q3"
@@ -65,7 +67,8 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/Q4"
@@ -81,7 +84,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/Q5"
@@ -96,7 +100,8 @@
             android:id="@+id/Level"
             android:layout_width="match_parent"
             android:layout_height="59dp"
-            android:text="CheckedTextView" />
+            android:text="CheckedTextView"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 

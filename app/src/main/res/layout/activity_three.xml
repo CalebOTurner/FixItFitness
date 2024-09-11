@@ -21,4 +21,12 @@
         tools:layout_editor_absoluteX="24dp"
         tools:layout_editor_absoluteY="16dp" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_checklist_24"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="233dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

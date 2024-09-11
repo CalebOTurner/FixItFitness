@@ -3,8 +3,8 @@
     <string name="p2intro_name">Build Your Prevention Plan </string>
     <string name="q1_name">What is your name?</string>
     <string name="q2_name">What is your age?</string>
-    <string name="q3_name">What is your height?</string>
-    <string name="q4_name">What is your weight?</string>
+    <string name="q3_name">What is your height? (m)</string>
+    <string name="q4_name">What is your weight? (kg)</string>
     <string name="q5_name">What is your current level of football?</string>
     <string name="intro_name">Welcome to Fix-It-Fitness</string>
     <string name="p1msg1_name">Prevention Planning</string>

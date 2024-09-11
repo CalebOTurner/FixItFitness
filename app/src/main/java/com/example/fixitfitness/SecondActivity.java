@@ -1,6 +1,7 @@
 package com.example.fixitfitness;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,8 +27,12 @@ public class SecondActivity extends AppCompatActivity {
             return insets;
         });
     }
-    public void handleSubmit (View view) {
+    public void handleSubmit(View view) {
+        // Create an Intent to start the ThirdActivity
+        Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
         Log.d("2nd Activity", "The button is clicked");
+
 
         //need to get user edits from each of the text fields
 

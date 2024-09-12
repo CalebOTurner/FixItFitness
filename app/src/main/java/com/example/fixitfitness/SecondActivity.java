@@ -29,8 +29,6 @@ public class SecondActivity extends AppCompatActivity {
     }
     public void handleSubmit(View view) {
         // Create an Intent to start the ThirdActivity
-        Intent intent = new Intent(this, ThirdActivity.class);
-        startActivity(intent);
         Log.d("2nd Activity", "The button is clicked");
 
 
@@ -45,19 +43,22 @@ public class SecondActivity extends AppCompatActivity {
         String age = ageEdit.getText().toString();
         String weight = weightEdit.getText().toString();
         String height = heightEdit.getText().toString();
-
+        boolean validated = true;
         //validate the inputs
         // show error messages if applicable
         if (name.length() <= 0) {
+            validated=false;
             showPopup(this, "Please enter a name");
             return;
         }
 
         if (name.length() >= 20) {
+            validated=false;
             showPopup(this, "Name is too long");
             return;
         }
         if (age.length() <= 0) {
+            validated=false;
             showPopup(this, "Please enter an age");
             return;
         }
@@ -65,6 +66,7 @@ public class SecondActivity extends AppCompatActivity {
         try {
             ageInt = Integer.parseInt(age);
             if (ageInt < 0) {
+                validated=false;
                 showPopup(this, "Please enter a valid age");
                 return;
             }
@@ -75,6 +77,7 @@ public class SecondActivity extends AppCompatActivity {
         }
         // Validates weight
         if (weight.length() <= 0) { // Checks that the user hasn't entered a weight
+            validated=false;
             showPopup(this, "Please enter a weight");
             return;
         }
@@ -83,18 +86,21 @@ public class SecondActivity extends AppCompatActivity {
             // Converts the weight to an integer
             weightInt = Integer.parseInt(weight);
             if (weightInt < 0) {
+                validated=false;
                 // Checks that the weight is not negative
                 showPopup(this, "Please enter a valid weight");
                 return;
             }
         } catch (NumberFormatException e) {
             // Makes sure that the weight is a number
+            validated=false;
             showPopup(this, "Please enter a valid weight");
             return;
         }
         // Validates height
         if (height.length() <= 0) {
             // Checks that the user hasn't entered a height
+            validated=false;
             showPopup(this, "Please enter a height");
             return;
         }
@@ -104,16 +110,21 @@ public class SecondActivity extends AppCompatActivity {
             heightInt = Integer.parseInt(height);
             if (heightInt < 0) {
                 // Checks that the height is not negative
+                validated=false;
                 showPopup(this, "Please enter a valid height");
                 return;
             }
         } catch (NumberFormatException e) {
             // Makes sure that the height is a number
+            validated=false;
             showPopup(this, "Please enter a valid height");
             return;
         }
 
-        }
+        Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
+
+    }
     public static void showPopup(Context context, String errorMessage) {
         Toast.makeText(context, errorMessage, Toast.LENGTH_SHORT).show();
     }

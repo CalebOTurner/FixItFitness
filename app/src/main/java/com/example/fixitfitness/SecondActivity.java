@@ -27,6 +27,17 @@ public class SecondActivity extends AppCompatActivity {
             return insets;
         });
     }
+    private boolean isAlpha(String str) {
+        if (str == null || str.isEmpty()) {
+            return false;
+        }
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isLetter(str.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
     public void handleSubmit(View view) {
         // Create an Intent to start the ThirdActivity
         Log.d("2nd Activity", "The button is clicked");
@@ -46,7 +57,7 @@ public class SecondActivity extends AppCompatActivity {
         boolean validated = true;
         //validate the inputs
         // show error messages if applicable
-        if (name.length() <= 0) {
+        if (isAlpha(name) == false || name.length() <= 0) {
             validated=false;
             showPopup(this, "Please enter a name");
             return;
@@ -65,7 +76,7 @@ public class SecondActivity extends AppCompatActivity {
         int ageInt;
         try {
             ageInt = Integer.parseInt(age);
-            if (ageInt < 0) {
+            if (ageInt <= 0) {
                 validated=false;
                 showPopup(this, "Please enter a valid age");
                 return;
@@ -85,7 +96,7 @@ public class SecondActivity extends AppCompatActivity {
         try {
             // Converts the weight to an integer
             weightInt = Integer.parseInt(weight);
-            if (weightInt < 0) {
+            if (weightInt <= 0) {
                 validated=false;
                 // Checks that the weight is not negative
                 showPopup(this, "Please enter a valid weight");

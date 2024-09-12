@@ -9,10 +9,12 @@
     tools:context=".SecondActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="332dp"
-        android:layout_height="439dp"
+        android:layout_height="348dp"
+        android:layout_marginBottom="200dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
@@ -97,14 +99,15 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="213dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="30dp"
+        android:layout_width="247dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="80dp"
         android:onClick="handleSubmit"
         android:text="Continue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
     <TextView
         android:id="@+id/textView4"

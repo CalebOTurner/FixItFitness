@@ -135,6 +135,10 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
 
+        intent.putExtra("name", name);
+        intent.putExtra("age", ageInt);
+        intent.putExtra("weight", weightInt);
+        intent.putExtra("height", heightInt);
     }
     public static void showPopup(Context context, String errorMessage) {
         Toast.makeText(context, errorMessage, Toast.LENGTH_SHORT).show();

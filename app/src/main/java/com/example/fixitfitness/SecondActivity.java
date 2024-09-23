@@ -125,6 +125,21 @@ public class SecondActivity extends AppCompatActivity {
                 showPopup(this, "Please enter a valid height");
                 return;
             }
+            if (heightInt == 0) {
+                throw new NumberFormatException();
+            }
+
+        if (heightInt > 220) {
+            validated=false;
+            showPopup(this, "You are too tall to use this app");
+            return;
+        }
+        if (heightInt < 120) {
+            validated=false;
+            showPopup(this, "You are too short to use this app");
+            return;
+            }
+
         } catch (NumberFormatException e) {
             // Makes sure that the height is a number
             validated=false;
@@ -133,12 +148,13 @@ public class SecondActivity extends AppCompatActivity {
         }
 
         Intent intent = new Intent(this, ThirdActivity.class);
-        startActivity(intent);
 
         intent.putExtra("name", name);
         intent.putExtra("age", ageInt);
         intent.putExtra("weight", weightInt);
         intent.putExtra("height", heightInt);
+
+        startActivity(intent);
     }
     public static void showPopup(Context context, String errorMessage) {
         Toast.makeText(context, errorMessage, Toast.LENGTH_SHORT).show();

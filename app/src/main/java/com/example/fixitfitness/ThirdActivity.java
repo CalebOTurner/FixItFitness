@@ -2,6 +2,8 @@ package com.example.fixitfitness;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -31,22 +33,47 @@ public class ThirdActivity extends AppCompatActivity {
         int weight = intent.getIntExtra("weight", 0);
         int height = intent.getIntExtra("height", 0);
 
-        TextView nameView = findViewById(R.id.textView7);
+        showPlan(weight);
+    }
+    private void showPlan(int weight) {
+        Plan plan = createPlan(weight);
+        TableLayout table = findViewById(R.id.Table);
 
-        // Height too low
-        if (height < 120) {
-            nameView.setText("You are too short to use this app");
-            return;
+        for(Excercise excercise : plan.getPlan()) {
+            TableRow row = createRow(excercise);
+            table.addView(row);
         }
 
-        // Height too low
-        if (height > 220) {
-            nameView.setText("You are too tall to use this app");
-            return;
-        }
     }
 
-    private Plan> createPlan(int weight) {
+    private TableRow createRow(Excercise excercise) {
+        TableRow row = new TableRow(this);
+
+        TextView name = new TextView(this);
+        //Padding of 6px
+        name.setPadding(6, 6, 6, 6);
+        name.setText(excercise.getName());
+        name.setTextColor(0xFFFFFFFF);
+        row.addView(name);
+
+        TextView reps = new TextView(this);
+        reps.setPadding(6, 6, 6, 6);
+
+        reps.setText(excercise.getReps());
+        reps.setTextColor(0xFFFFFFFF);
+        row.addView(reps);
+
+        TextView sets = new TextView(this);
+        sets.setPadding(6, 6, 6, 6);
+        sets.setText(excercise.getSets());
+        sets.setTextColor(0xFFFFFFFF);
+        row.addView(sets);
+
+        return row;
+    }
+
+
+    private Plan createPlan(int weight) {
         Plan plan = new Plan();
 
         //upper body

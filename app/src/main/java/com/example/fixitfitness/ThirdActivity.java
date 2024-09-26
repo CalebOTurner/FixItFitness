@@ -77,18 +77,18 @@ public class ThirdActivity extends AppCompatActivity {
         Plan plan = new Plan();
 
         //upper body
-        Excercise dumbbellChestFly = new Excercise("Dumbbell Chest Fly", "6-8", "2");
-        Excercise dumbbellBenchPress = new Excercise("Single Arm Dumbbell Row", "6-8 per arm","2");
-        Excercise dumbbellTricepExtension = new Excercise("Overhead Tricep Extension", "6-8","2");
-        Excercise dumbbellHammerCurl = new Excercise("Dumbbell Hammer Curl", "6-8","2");
-        Excercise dumbbellLatRaise = new Excercise("Dumbbell Lat Raise","6-8","2");
+        Excercise dumbbellChestFly = new Excercise("Dumbbell Chest Fly", "2", "6-8");
+        Excercise dumbbellBenchPress = new Excercise("Single Arm Dumbbell Row", "2","6-8 per arm");
+        Excercise dumbbellTricepExtension = new Excercise("Overhead Tricep Extension", "2","6-8");
+        Excercise dumbbellHammerCurl = new Excercise("Dumbbell Hammer Curl", "2","6-8");
+        Excercise dumbbellLatRaise = new Excercise("Dumbbell Lat Raise","2","6-8");
 
         //lower body
-        Excercise bulgarianSplitSquat = new Excercise("Bulgarian Split Squat", "6-8 per leg", "2");
-        Excercise weightedRDL = new Excercise("Weighted RDL", "6-8","2");
-        Excercise gobletSquat = new Excercise("Goblet Squat", "6-8","2");
-        Excercise boxJump = new Excercise("Box Jump", "8-12","2");
-        Excercise walkingLunges = new Excercise("Walking Lunges","8-12","2");
+        Excercise bulgarianSplitSquat = new Excercise("Bulgarian Split Squat", "2", "6-8 per leg");
+        Excercise weightedRDL = new Excercise("Weighted RDL", "2","6-8");
+        Excercise gobletSquat = new Excercise("Goblet Squat", "2","6-8");
+        Excercise boxJump = new Excercise("Box Jump", "2","8-12");
+        Excercise walkingLunges = new Excercise("Walking Lunges","2","8-12");
 
 
 

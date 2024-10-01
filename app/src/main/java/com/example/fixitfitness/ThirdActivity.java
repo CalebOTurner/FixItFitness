@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 public class ThirdActivity extends AppCompatActivity {
 
+    // Enables the edge-to-edge display of the app
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +27,7 @@ public class ThirdActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        // Retrieve the data passed from the previous activity (SecondActivity)
         Intent intent = getIntent();
         String name = intent.getStringExtra( "name");
         int age = intent.getIntExtra("age", 0);
@@ -35,20 +36,24 @@ public class ThirdActivity extends AppCompatActivity {
 
         showPlan(weight);
     }
+    // Call the method to display the workout plan based on the user's weight
     private void showPlan(int weight) {
+        // Create a workout plan based on the user's weight
         Plan plan = createPlan(weight);
+        // Reference to the table layout in the activity layout to display the exercises
         TableLayout table = findViewById(R.id.Table);
 
+        // Loop through each exercise in the plan and add a row for each exercise
         for(Excercise excercise : plan.getPlan()) {
             TableRow row = createRow(excercise);
             table.addView(row);
         }
 
     }
-
+    // Create a new row for each exercise
     private TableRow createRow(Excercise excercise) {
         TableRow row = new TableRow(this);
-
+    // Create a TextView for the exercise name and set up colours
         TextView name = new TextView(this);
         //Padding of 6px
         name.setPadding(6, 6, 6, 6);
@@ -58,11 +63,11 @@ public class ThirdActivity extends AppCompatActivity {
 
         TextView reps = new TextView(this);
         reps.setPadding(6, 6, 6, 6);
-
+        // Create a TextView for the exercise reps
         reps.setText(excercise.getReps());
         reps.setTextColor(0xFFFFFFFF);
         row.addView(reps);
-
+        // Create a TextView for the exercise sets
         TextView sets = new TextView(this);
         sets.setPadding(6, 6, 6, 6);
         sets.setText(excercise.getSets());
@@ -72,7 +77,7 @@ public class ThirdActivity extends AppCompatActivity {
         return row;
     }
 
-
+    // Create a new workout plan
     private Plan createPlan(int weight) {
         Plan plan = new Plan();
 
@@ -91,7 +96,8 @@ public class ThirdActivity extends AppCompatActivity {
         Excercise walkingLunges = new Excercise("Walking Lunges","2","8-12");
 
 
-
+        // Customize the workout plan based on the user's weight
+        // For users weighing less than 65 kg
         if (weight < 65) {
             plan.addExcercise(dumbbellChestFly);
             plan.addExcercise(dumbbellBenchPress);
@@ -99,6 +105,7 @@ public class ThirdActivity extends AppCompatActivity {
             plan.addExcercise(dumbbellHammerCurl);
             plan.addExcercise(dumbbellLatRaise);
 
+            // For users weighing between 65 and 73 kg
         } else if (weight < 73) {
             plan.addExcercise(dumbbellChestFly);
             plan.addExcercise(dumbbellBenchPress);
@@ -106,6 +113,7 @@ public class ThirdActivity extends AppCompatActivity {
             plan.addExcercise(walkingLunges);
             plan.addExcercise(boxJump);
 
+            // For users weighing between 73 and 81 kg
         } else if (weight < 81) {
             plan.addExcercise(bulgarianSplitSquat);
             plan.addExcercise(weightedRDL);
@@ -113,6 +121,7 @@ public class ThirdActivity extends AppCompatActivity {
             plan.addExcercise(dumbbellHammerCurl);
             plan.addExcercise(dumbbellLatRaise);
 
+            // For users weighing between 81 and 90 kg
         } else if (weight < 90) {
             plan.addExcercise(bulgarianSplitSquat);
             plan.addExcercise(weightedRDL);

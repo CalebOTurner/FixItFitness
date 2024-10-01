@@ -1,5 +1,6 @@
 package com.example.fixitfitness;
 
+// This class represents an Exercise, with properties for name, reps, and sets.
 public class Excercise {
     private String name;
     private String reps;

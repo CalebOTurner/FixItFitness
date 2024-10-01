@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-
+    // Create an Intent to navigate to SecondActivity when the user clicks the button
     public void onContinueClicked(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
         startActivity(intent);
